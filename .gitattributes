@@ -1,0 +1,10 @@
+* text=auto
+*.java text
+*.yml text
+*.md text
+*.xml text
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.jar binary
+*.db binary
+*.png binary

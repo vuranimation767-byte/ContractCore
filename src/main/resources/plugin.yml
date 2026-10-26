@@ -1,0 +1,35 @@
+name: ContractCore
+version: ${project.version}
+main: com.blockbuilder.contractcore.ContractCorePlugin
+description: Configurable contracts and quests with objectives, rewards and persistence.
+author: ContractCore
+api-version: '1.21'
+load: POSTWORLD
+
+permissions:
+  contractcore.use:
+    description: Browse, accept, track and claim contracts.
+    default: true
+  contractcore.admin:
+    description: Administrative access to ContractCore.
+    default: op
+    children:
+      contractcore.admin.reload: true
+      contractcore.admin.manage: true
+  contractcore.admin.reload:
+    description: Reload the contract configuration.
+    default: op
+  contractcore.admin.manage:
+    description: Assign, complete, reset and inspect player contracts.
+    default: op
+
+commands:
+  contracts:
+    description: Browse, accept and claim contracts.
+    usage: /contracts [accept|claim|abandon <id>|progress]
+    aliases: [contract]
+    permission: contractcore.use
+  contractcore:
+    description: ContractCore administration.
+    usage: /contractcore <reload|assign|complete|reset|info|save>
+    permission: contractcore.admin
