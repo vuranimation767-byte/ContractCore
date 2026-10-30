@@ -1,0 +1,251 @@
+# ContractCore configuration.
+# contract ids must be lowercase and may only contain a-z, 0-9, _ and -.
+# reward 'exp' values are experience levels (the number on the XP bar).
+settings:
+  # How many contracts a player may have active at the same time.
+  max-active-contracts: 3
+  # How often dirty player data is written to the database, in seconds.
+  autosave-seconds: 20
+
+contracts:
+  - id: stone-digger
+    name: "Stone Digger"
+    description: "Break 64 stone blocks."
+    objective:
+      type: BREAK_BLOCK
+      target: STONE
+      amount: 64
+    difficulty: EASY
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 150
+
+  - id: lumberjack
+    name: "Lumberjack"
+    description: "Chop and collect 128 oak logs."
+    objective:
+      type: COLLECT_ITEM
+      target: OAK_LOG
+      amount: 128
+    difficulty: EASY
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 3600
+    reward:
+      exp: 250
+
+  - id: zombie-hunter
+    name: "Zombie Hunter"
+    description: "Kill 20 zombies."
+    objective:
+      type: KILL_MOB
+      target: ZOMBIE
+      amount: 20
+    difficulty: MEDIUM
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 7200
+    reward:
+      exp: 400
+
+  - id: diamond-hoarder
+    name: "Diamond Hoarder"
+    description: "Mine and collect 10 diamonds."
+    objective:
+      type: COLLECT_ITEM
+      target: DIAMOND
+      amount: 10
+    difficulty: HARD
+    enabled: true
+    reward:
+      exp: 1000
+
+  - id: dirt-digger
+    name: "Dirt Digger"
+    description: "Break 10 dirt blocks."
+    objective:
+      type: BREAK_BLOCK
+      target: DIRT
+      amount: 10
+    difficulty: EASY
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 300
+    reward:
+      exp: 30
+
+  - id: cobble-runner
+    name: "Cobble Runner"
+    description: "Collect 16 cobblestone."
+    objective:
+      type: COLLECT_ITEM
+      target: COBBLESTONE
+      amount: 16
+    difficulty: EASY
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 300
+    reward:
+      exp: 40
+
+  - id: skeleton-slayer
+    name: "Skeleton Slayer"
+    description: "Kill 5 skeletons."
+    objective:
+      type: KILL_MOB
+      target: SKELETON
+      amount: 5
+    difficulty: MEDIUM
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 120
+
+  - id: oak-logger
+    name: "Oak Logger"
+    description: "Collect 8 oak logs."
+    objective:
+      type: COLLECT_ITEM
+      target: OAK_LOG
+      amount: 8
+    difficulty: EASY
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 180
+    reward:
+      exp: 35
+
+  - id: blaze-hunter
+    name: "Blaze Hunter"
+    description: "Kill 30 blazes in the Nether."
+    objective:
+      type: KILL_MOB
+      target: BLAZE
+      amount: 30
+    difficulty: MEDIUM
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 1800
+    reward:
+      exp: 10
+
+  - id: enderman-hunter
+    name: "Enderman Hunter"
+    description: "Kill 25 endermen."
+    objective:
+      type: KILL_MOB
+      target: ENDERMAN
+      amount: 25
+    difficulty: MEDIUM
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 1800
+    reward:
+      exp: 10
+
+  - id: pearl-collector
+    name: "Pearl Collector"
+    description: "Collect 16 ender pearls."
+    objective:
+      type: COLLECT_ITEM
+      target: ENDER_PEARL
+      amount: 16
+    difficulty: MEDIUM
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 1200
+    reward:
+      exp: 8
+
+  - id: ancient-debris
+    name: "Ancient Debris Miner"
+    description: "Break 8 ancient debris blocks."
+    objective:
+      type: BREAK_BLOCK
+      target: ANCIENT_DEBRIS
+      amount: 8
+    difficulty: HARD
+    enabled: true
+    repeatable: true
+    cooldown-seconds: 3600
+    reward:
+      exp: 15
+
+  - id: netherite-scrap
+    name: "Netherite Scrap"
+    description: "Smelt and collect 8 netherite scrap."
+    objective:
+      type: COLLECT_ITEM
+      target: NETHERITE_SCRAP
+      amount: 8
+    difficulty: HARD
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 15
+
+  - id: elder-guardian-hunt
+    name: "Elder Guardian Hunt"
+    description: "Kill 2 elder guardians in an ocean monument."
+    objective:
+      type: KILL_MOB
+      target: ELDER_GUARDIAN
+      amount: 2
+    difficulty: HARD
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 25
+
+  - id: warden-slayer
+    name: "Warden Slayer"
+    description: "Kill a Warden in the deep dark."
+    objective:
+      type: KILL_MOB
+      target: WARDEN
+      amount: 1
+    difficulty: HARD
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 30
+
+  - id: wither-slayer
+    name: "Wither Slayer"
+    description: "Defeat the Wither."
+    objective:
+      type: KILL_MOB
+      target: WITHER
+      amount: 1
+    difficulty: HARD
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 40
+
+  - id: dragon-slayer
+    name: "Dragon Slayer"
+    description: "Defeat the Ender Dragon."
+    objective:
+      type: KILL_MOB
+      target: ENDER_DRAGON
+      amount: 1
+    difficulty: HARD
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 60
+
+  - id: elytra-hunter
+    name: "Elytra Hunter"
+    description: "Find and collect an elytra."
+    objective:
+      type: COLLECT_ITEM
+      target: ELYTRA
+      amount: 1
+    difficulty: HARD
+    enabled: true
+    repeatable: false
+    reward:
+      exp: 50
